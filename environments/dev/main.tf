@@ -18,6 +18,7 @@ locals {
 }
 
 provider "google" {
+  credentials = "${GOOGLE_APPLICATION_CREDENTIALS}"
   project = "${var.project}"
 }
 
