@@ -15,10 +15,11 @@
 
 locals {
   "env" = "dev"
+  "GOOGLE_APPLICATION_CREDENTIALS" = "/Users/cunninj0/.config/gcloud/mm-sandbox-gitops.json"
 }
 
 provider "google" {
-  credentials = "${GOOGLE_APPLICATION_CREDENTIALS}"
+  credentials = "${local.GOOGLE_APPLICATION_CREDENTIALS}"
   project = "${var.project}"
 }
 
